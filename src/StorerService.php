@@ -61,13 +61,15 @@ class StorerService implements StorerServiceInterface
                     // Is a MySQL error?
                     false !== strpos($e->getMessage(), "'PRIMARY'")
                     // Is a Sqlite error?
-                    || (false !== strpos($e->getMessage(), ".package"))
+                    || false !== strpos($e->getMessage(), "package is not unique")
+                    || false !== strpos($e->getMessage(), ".package")
                 ) {
                     throw new DataDuplicatedException($package);
                 } elseif (
                     // Is a MySQL error?
                     false !== strpos($e->getMessage(), "'url'")
                     // Is a Sqlite error?
+                    || false !== strpos($e->getMessage(), "url is not unique")
                     || false !== strpos($e->getMessage(), ".url")
                 ) {
                     throw new UrlDuplicatedException($url);
