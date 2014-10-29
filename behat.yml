@@ -1,0 +1,10 @@
+default:
+    extensions:
+        Yosmanyga\DoctrineDbalExtension\ServiceContainer\DoctrineDbalExtension:
+
+    suites:
+        core:
+            paths: [%paths.base%/vendor/packagile/package-core-abstraction/features/all.feature]
+            contexts:
+                - Packagile\Package\Core\Testing\Context
+
