@@ -3,8 +3,12 @@ default:
         Yosmanyga\DoctrineDbalExtension\ServiceContainer\DoctrineDbalExtension:
 
     suites:
-        core:
-            paths: [%paths.base%/vendor/packagile/package-core-abstraction/features/all.feature]
+        storer_collector:
+            paths: [%paths.base%/vendor/packagile/package-core-abstraction/features/storer_collector.feature]
             contexts:
-                - Packagile\Package\Core\Testing\Context
+                - Packagile\Package\Core\Testing\StorerCollectorContext
+        url_resolver:
+            paths: [%paths.base%/vendor/packagile/package-core-abstraction/features/url_resolver.feature]
+            contexts:
+                - Packagile\Package\Core\Testing\UrlResolverContext
 

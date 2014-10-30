@@ -8,7 +8,8 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "packagile/package-core-abstraction": "0.1.*"
+        "packagile/package-core-abstraction": "0.2.*",
+        "guzzlehttp/guzzle": "~4.0"
     },
     "require-dev": {
         "behat/behat": "3.0.*",

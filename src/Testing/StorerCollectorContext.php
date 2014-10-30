@@ -21,7 +21,7 @@ use Doctrine\DBAL\Connection;
 /**
  * @author Yosmany Garcia <yosmanyga@gmail.com>
  */
-class Context implements SnippetAcceptingContext, DoctrineDbalAwareContext
+class StorerCollectorContext implements SnippetAcceptingContext, DoctrineDbalAwareContext
 {
     /**
      * @var \Doctrine\DBAL\Connection
