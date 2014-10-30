@@ -7,7 +7,7 @@
         }
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4.0",
         "packagile/package-core-abstraction": "0.2.*",
         "guzzlehttp/guzzle": "~4.0"
     },
