@@ -39,6 +39,10 @@ class UrlResolverService implements UrlResolverServiceInterface
                 $package
             ));
         } catch (RequestException $e) {
+            if (false !== strpos($e->getMessage(), 'Could not resolve host')) {
+                throw new PackagistNotResolvedException();
+            }
+
             if ($e->getResponse() && 404 == (int) $e->getResponse()->getStatusCode()) {
                 throw new PackageNotFoundException($package);
             }
